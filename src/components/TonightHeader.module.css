@@ -27,6 +27,10 @@
   margin-bottom: var(--space-1);
 }
 
+.subtitleShort {
+  display: none;
+}
+
 .updated {
   font-size: var(--text-label-lg);
   color: var(--color-text-secondary);
@@ -71,17 +75,58 @@
   text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    gap: var(--space-4);
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .editorial {
+    flex: 0 0 auto;
+    min-width: 0;
   }
 
   .title {
-    font-size: 32px;
+    display: none;
+  }
+
+  .subtitleFull {
+    display: none;
+  }
+
+  .subtitleShort {
+    display: inline;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .updated {
+    display: none;
   }
 
   .dateControls {
     padding-top: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .dateLabel {
+    font-size: 14px;
+    min-width: auto;
+  }
+
+  .dateBtn {
+    width: 28px;
+    height: 28px;
   }
 }

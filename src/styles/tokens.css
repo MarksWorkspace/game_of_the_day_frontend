@@ -23,7 +23,12 @@
   --text-nav: 14px;
   --text-logo: 22px;
   --text-team-featured: 28px;
-  --text-score-featured: 56px;
+  --text-score-featured: 72px;
+  --text-score-featured-mobile: 76px;
+  --text-team-featured-mobile: 20px;
+  --text-tag: 16px;
+  --text-tag-mobile: 15px;
+  --text-body-sm: 13px;
   --text-team-row: 18px;
   --text-score-row: 24px;
   --text-rank: 20px;
@@ -77,7 +82,8 @@
     --text-nav: 15px;
     --text-logo: 26px;
     --text-team-featured: 32px;
-    --text-score-featured: 64px;
+    --text-score-featured: 84px;
+    --text-score-featured-mobile: 80px;
     --text-team-row: 20px;
     --text-score-row: 28px;
     --text-rank: 22px;
@@ -119,7 +125,8 @@
     --text-nav: 16px;
     --text-logo: 28px;
     --text-team-featured: 36px;
-    --text-score-featured: 72px;
+    --text-score-featured: 96px;
+    --text-score-featured-mobile: 84px;
     --text-team-row: 22px;
     --text-score-row: 32px;
     --text-rank: 24px;
@@ -153,12 +160,25 @@
   :root {
     --text-page-title: 56px;
     --text-team-featured: 38px;
-    --text-score-featured: 80px;
+    --text-score-featured: 104px;
     --text-score-row: 36px;
 
     --content-max-width: 1800px;
     --content-padding-x: 48px;
 
     --logo-lg: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 56px;
+    --content-padding-x: 16px;
+    --logo-sm: 28px;
+    --logo-md: 32px;
+    --logo-lg: 40px;
+    --btn-icon-size: 32px;
+    --text-page-title: 32px;
+    --text-section: 20px;
   }
 }

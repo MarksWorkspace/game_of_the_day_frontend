@@ -54,7 +54,34 @@ export function GameRow({ game }: GameRowProps) {
         </button>
       </div>
 
-      <p className={styles.reasons}>{reasons.join(' • ')}</p>
+      <div className={styles.mobileLine}>
+        <div className={styles.mobileHeader}>
+          <span className={styles.rank}>{rank}</span>
+          <div className={styles.mobileMatchup}>
+            <span className={styles.mobileTeam}>{awayTeam.name}</span>
+            <span className={styles.mobileVs}>vs</span>
+            <span className={styles.mobileTeam}>{homeTeam.name}</span>
+          </div>
+          <span className={styles.mobileScore}>{gameScore}</span>
+          <button
+            type="button"
+            className={`btn-icon ${isFavorite ? 'is-active' : ''} ${styles.mobileFavorite}`}
+            aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+            aria-pressed={isFavorite}
+            onClick={() => setIsFavorite((prev) => !prev)}
+          >
+            <StarIcon size={16} />
+          </button>
+        </div>
+        <div className={styles.mobileMeta}>
+          <time className={styles.startTime}>{startTime}</time>
+          <span className={styles.metaDot} aria-hidden="true">
+            ·
+          </span>
+          <span className={styles.network}>{network}</span>
+        </div>
+        <p className={styles.mobileReasons}>{reasons.join(' · ')}</p>
+      </div>
     </article>
   )
 }

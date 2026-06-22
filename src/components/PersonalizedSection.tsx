@@ -5,13 +5,17 @@ import styles from './PersonalizedSection.module.css'
 interface PersonalizedSectionProps {
   userName: string
   pick: PersonalizedPick
+  className?: string
 }
 
-export function PersonalizedSection({ userName, pick }: PersonalizedSectionProps) {
+export function PersonalizedSection({ userName, pick, className }: PersonalizedSectionProps) {
   const { awayTeam, homeTeam, startTime, network, gameScore, preferenceReasons } = pick
 
   return (
-    <section className={styles.section} aria-labelledby="personalized-heading">
+    <section
+      className={[styles.section, className].filter(Boolean).join(' ')}
+      aria-labelledby="personalized-heading"
+    >
       <h2 id="personalized-heading" className="section-heading">
         Best for {userName}
       </h2>

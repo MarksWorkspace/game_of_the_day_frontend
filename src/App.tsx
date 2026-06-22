@@ -16,14 +16,19 @@ export default function App() {
       <Navbar />
       <main className="page-main">
         <TonightHeader
+          className="page-tonight-meta"
           matchupCount={tonightMeta.matchupCount}
           leagues={tonightMeta.leagues}
           updatedAt={tonightMeta.updatedAt}
           dateLabel={tonightMeta.dateLabel}
         />
-        <FeaturedGame game={featuredGame} />
-        <GameList games={rankedGames} />
-        <PersonalizedSection userName="Mark" pick={personalizedPick} />
+        <FeaturedGame game={featuredGame} className="page-gotd" />
+        <GameList games={rankedGames} className="page-games-list" />
+        <PersonalizedSection
+          userName="Mark"
+          pick={personalizedPick}
+          className="page-personal"
+        />
       </main>
     </div>
   )

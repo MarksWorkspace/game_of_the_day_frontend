@@ -4,14 +4,18 @@ import styles from './FeaturedGame.module.css'
 
 interface FeaturedGameProps {
   game: FeaturedGameType
+  className?: string
 }
 
-export function FeaturedGame({ game }: FeaturedGameProps) {
+export function FeaturedGame({ game, className }: FeaturedGameProps) {
   const { awayTeam, homeTeam, startTime, network, venue, gameScore, reasons, selectionReason } =
     game
 
   return (
-    <section className={styles.featured} aria-labelledby="gotd-heading">
+    <section
+      className={[styles.featured, className].filter(Boolean).join(' ')}
+      aria-labelledby="gotd-heading"
+    >
       <div className={styles.texture} aria-hidden="true" />
 
       <div className={styles.topRow}>
@@ -30,7 +34,13 @@ export function FeaturedGame({ game }: FeaturedGameProps) {
           <span className={styles.record}>{awayTeam.record}</span>
         </div>
 
-        <span className={styles.vs}>VS</span>
+        <div className={styles.centerBlock}>
+          <span className={styles.vs}>VS</span>
+          <div className={styles.scoreBlock}>
+            <span className={styles.scoreValue}>{gameScore}</span>
+            <span className="label">Game Score</span>
+          </div>
+        </div>
 
         <div className={`${styles.teamBlock} ${styles.teamBlockRight}`}>
           <TeamLogo team={homeTeam} size="lg" />
@@ -39,16 +49,18 @@ export function FeaturedGame({ game }: FeaturedGameProps) {
         </div>
       </div>
 
-      <div className={styles.scoreBlock}>
-        <span className={styles.scoreValue}>{gameScore}</span>
-        <span className="label">Game Score</span>
-      </div>
+      <ul className={styles.tagList} aria-label="Why this game was selected">
+        {reasons.map((reason) => (
+          <li key={reason} className={styles.tag}>
+            {reason}
+          </li>
+        ))}
+      </ul>
 
-      <p className={styles.reasons}>{reasons.join(' • ')}</p>
       <p className={styles.selectionReason}>{selectionReason}</p>
 
       <div className={styles.footer}>
-        <button type="button" className="btn-primary">
+        <button type="button" className={`btn-primary ${styles.cta}`}>
           View matchup
         </button>
         <span className={styles.broadcast}>

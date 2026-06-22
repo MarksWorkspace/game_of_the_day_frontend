@@ -23,6 +23,10 @@
   gap: var(--space-3);
 }
 
+.mobileLine {
+  display: none;
+}
+
 .rank {
   font-family: var(--font-display);
   font-size: var(--text-rank);
@@ -113,28 +117,108 @@
 }
 
 .reasons {
-  font-size: var(--text-body);
+  font-size: var(--text-body-sm);
   color: var(--color-text-secondary);
   margin-top: var(--space-2);
   padding-left: calc(var(--row-rank-col) + var(--space-3));
 }
 
 @media (max-width: 768px) {
-  .mainLine {
-    grid-template-columns: 28px 1fr 72px 1fr 52px 32px;
+  .row {
+    padding: var(--space-3) 0;
+  }
+
+  .row:hover {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mainLine,
+  .reasons {
+    display: none;
+  }
+
+  .mobileLine {
+    display: block;
+  }
+
+  .mobileHeader {
+    display: grid;
+    grid-template-columns: 22px 1fr auto 28px;
+    align-items: center;
     gap: var(--space-2);
   }
 
-  .teamName {
+  .mobileHeader .rank {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .mobileMatchup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px var(--space-2);
+    min-width: 0;
+  }
+
+  .mobileTeam {
+    font-family: var(--font-display);
     font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
   }
 
-  .scoreValue {
-    font-size: 20px;
-  }
-
-  .reasons {
-    padding-left: calc(28px + var(--space-2));
+  .mobileVs {
+    font-family: var(--font-display);
     font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .mobileScore {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-accent);
+  }
+
+  .mobileFavorite {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mobileMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-1);
+    padding-left: calc(22px + var(--space-2));
+  }
+
+  .mobileMeta .startTime {
+    font-size: 13px;
+  }
+
+  .mobileMeta .network {
+    font-size: 11px;
+  }
+
+  .metaDot {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+  }
+
+  .mobileReasons {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-2);
+    padding-left: calc(22px + var(--space-2));
   }
 }

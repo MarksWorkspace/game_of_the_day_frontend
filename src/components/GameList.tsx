@@ -4,11 +4,15 @@ import styles from './GameList.module.css'
 
 interface GameListProps {
   games: Game[]
+  className?: string
 }
 
-export function GameList({ games }: GameListProps) {
+export function GameList({ games, className }: GameListProps) {
   return (
-    <section className={styles.section} aria-labelledby="best-games-heading">
+    <section
+      className={[styles.section, className].filter(Boolean).join(' ')}
+      aria-labelledby="best-games-heading"
+    >
       <h2 id="best-games-heading" className="section-heading">
         Best Games Tonight
       </h2>

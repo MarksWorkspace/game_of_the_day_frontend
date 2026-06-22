@@ -12,9 +12,11 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: 1.5;
@@ -121,6 +123,26 @@ ul {
 
 @media (max-width: 768px) {
   .page-main {
-    padding: var(--space-5) var(--space-4) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3) var(--space-4) var(--space-8);
+  }
+
+  .page-tonight-meta {
+    order: 1;
+    margin-bottom: var(--space-3);
+  }
+
+  .page-gotd {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .page-games-list {
+    order: 3;
+  }
+
+  .page-personal {
+    order: 4;
   }
 }
