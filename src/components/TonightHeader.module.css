@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.editorial {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-page-title);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.updated {
+  font-size: var(--text-label-lg);
+  color: var(--color-text-secondary);
+}
+
+.dateControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  padding-top: var(--space-2);
+}
+
+.dateBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.dateBtn:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-secondary);
+  background-color: var(--color-surface-elevated);
+}
+
+.dateLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-date);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+  min-width: 100px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .dateControls {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sm {
+  width: var(--logo-sm);
+  height: var(--logo-sm);
+}
+
+.md {
+  width: var(--logo-md);
+  height: var(--logo-md);
+}
+
+.lg {
+  width: var(--logo-lg);
+  height: var(--logo-lg);
+}

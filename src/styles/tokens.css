@@ -1,0 +1,164 @@
+:root {
+  /* Stadium Night palette */
+  --color-bg: #0b0d10;
+  --color-surface: #14171c;
+  --color-surface-elevated: #1b1f26;
+  --color-text-primary: #f5f7fa;
+  --color-text-secondary: #929aa6;
+  --color-border: #292e37;
+  --color-accent: #f4b942;
+  --color-positive: #3ddc97;
+  --color-negative: #ff647c;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --text-body: 14px;
+  --text-body-lg: 16px;
+  --text-label: 11px;
+  --text-label-lg: 12px;
+  --text-section: 22px;
+  --text-page-title: 40px;
+  --text-nav: 14px;
+  --text-logo: 22px;
+  --text-team-featured: 28px;
+  --text-score-featured: 56px;
+  --text-team-row: 18px;
+  --text-score-row: 24px;
+  --text-rank: 20px;
+  --text-time-row: 16px;
+  --text-team-personal: 20px;
+  --text-score-personal: 32px;
+  --text-date: 18px;
+  --text-btn: 14px;
+
+  /* Spacing (8px system) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 64px;
+
+  /* Layout */
+  --nav-height: 68px;
+  --content-max-width: 1120px;
+  --content-padding-x: 24px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Component sizing */
+  --logo-sm: 32px;
+  --logo-md: 36px;
+  --logo-lg: 48px;
+  --btn-icon-size: 36px;
+  --row-rank-col: 32px;
+  --row-center-col: 100px;
+  --row-score-col: 72px;
+  --row-action-col: 36px;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --text-body: 15px;
+    --text-body-lg: 17px;
+    --text-label: 12px;
+    --text-label-lg: 13px;
+    --text-section: 26px;
+    --text-page-title: 46px;
+    --text-nav: 15px;
+    --text-logo: 26px;
+    --text-team-featured: 32px;
+    --text-score-featured: 64px;
+    --text-team-row: 20px;
+    --text-score-row: 28px;
+    --text-rank: 22px;
+    --text-time-row: 18px;
+    --text-team-personal: 22px;
+    --text-score-personal: 36px;
+    --text-date: 20px;
+    --text-btn: 15px;
+
+    --space-5: 28px;
+    --space-6: 36px;
+    --space-7: 48px;
+    --space-8: 56px;
+    --space-9: 72px;
+
+    --nav-height: 72px;
+    --content-max-width: 1360px;
+    --content-padding-x: 32px;
+
+    --logo-sm: 40px;
+    --logo-md: 44px;
+    --logo-lg: 56px;
+    --btn-icon-size: 40px;
+    --row-rank-col: 40px;
+    --row-center-col: 120px;
+    --row-score-col: 88px;
+    --row-action-col: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --text-body: 16px;
+    --text-body-lg: 18px;
+    --text-label: 12px;
+    --text-label-lg: 13px;
+    --text-section: 28px;
+    --text-page-title: 52px;
+    --text-nav: 16px;
+    --text-logo: 28px;
+    --text-team-featured: 36px;
+    --text-score-featured: 72px;
+    --text-team-row: 22px;
+    --text-score-row: 32px;
+    --text-rank: 24px;
+    --text-time-row: 20px;
+    --text-team-personal: 24px;
+    --text-score-personal: 40px;
+    --text-date: 22px;
+    --text-btn: 16px;
+
+    --space-6: 40px;
+    --space-7: 56px;
+    --space-8: 64px;
+    --space-9: 80px;
+
+    --nav-height: 76px;
+    --content-max-width: 1640px;
+    --content-padding-x: 40px;
+
+    --logo-sm: 44px;
+    --logo-md: 48px;
+    --logo-lg: 64px;
+    --btn-icon-size: 44px;
+    --row-rank-col: 44px;
+    --row-center-col: 140px;
+    --row-score-col: 96px;
+    --row-action-col: 44px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --text-page-title: 56px;
+    --text-team-featured: 38px;
+    --text-score-featured: 80px;
+    --text-score-row: 36px;
+
+    --content-max-width: 1800px;
+    --content-padding-x: 48px;
+
+    --logo-lg: 72px;
+  }
+}
