@@ -21,7 +21,9 @@ export function GameRow({ game }: GameRowProps) {
           <TeamLogo team={awayTeam} size="sm" />
           <div className={styles.teamInfo}>
             <span className={styles.teamName}>{awayTeam.name}</span>
-            <span className={styles.record}>{awayTeam.record}</span>
+            {awayTeam.record ? (
+              <span className={styles.record}>{awayTeam.record}</span>
+            ) : null}
           </div>
         </div>
 
@@ -33,7 +35,9 @@ export function GameRow({ game }: GameRowProps) {
         <div className={styles.homeTeam}>
           <div className={styles.teamInfo}>
             <span className={styles.teamName}>{homeTeam.name}</span>
-            <span className={styles.record}>{homeTeam.record}</span>
+            {homeTeam.record ? (
+              <span className={styles.record}>{homeTeam.record}</span>
+            ) : null}
           </div>
           <TeamLogo team={homeTeam} size="sm" />
         </div>

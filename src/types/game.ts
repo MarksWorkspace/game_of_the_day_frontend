@@ -2,9 +2,9 @@ export type League = 'NBA' | 'NHL' | 'MLB'
 
 export interface Team {
   name: string
-  record: string
-  logoSlug: string
+  logo: string
   league: League
+  record?: string
 }
 
 export interface Game {
@@ -18,6 +18,7 @@ export interface Game {
   gameScore: number
   reasons: string[]
   isFavorite?: boolean
+  statusLabel?: string
 }
 
 export interface FeaturedGame extends Game {

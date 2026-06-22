@@ -27,7 +27,9 @@ export function PersonalizedSection({ userName, pick, className }: PersonalizedS
             <TeamLogo team={awayTeam} size="md" />
             <div>
               <span className={styles.teamName}>{awayTeam.name}</span>
-              <span className={styles.record}>{awayTeam.record}</span>
+              {awayTeam.record ? (
+                <span className={styles.record}>{awayTeam.record}</span>
+              ) : null}
             </div>
           </div>
 
@@ -39,7 +41,9 @@ export function PersonalizedSection({ userName, pick, className }: PersonalizedS
           <div className={`${styles.teamSide} ${styles.teamSideRight}`}>
             <div>
               <span className={styles.teamName}>{homeTeam.name}</span>
-              <span className={styles.record}>{homeTeam.record}</span>
+              {homeTeam.record ? (
+                <span className={styles.record}>{homeTeam.record}</span>
+              ) : null}
             </div>
             <TeamLogo team={homeTeam} size="md" />
           </div>

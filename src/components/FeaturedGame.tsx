@@ -31,7 +31,9 @@ export function FeaturedGame({ game, className }: FeaturedGameProps) {
         <div className={styles.teamBlock}>
           <TeamLogo team={awayTeam} size="lg" />
           <span className={styles.teamName}>{awayTeam.name}</span>
-          <span className={styles.record}>{awayTeam.record}</span>
+          {awayTeam.record ? (
+            <span className={styles.record}>{awayTeam.record}</span>
+          ) : null}
         </div>
 
         <div className={styles.centerBlock}>
@@ -45,7 +47,9 @@ export function FeaturedGame({ game, className }: FeaturedGameProps) {
         <div className={`${styles.teamBlock} ${styles.teamBlockRight}`}>
           <TeamLogo team={homeTeam} size="lg" />
           <span className={styles.teamName}>{homeTeam.name}</span>
-          <span className={styles.record}>{homeTeam.record}</span>
+          {homeTeam.record ? (
+            <span className={styles.record}>{homeTeam.record}</span>
+          ) : null}
         </div>
       </div>
 
